@@ -12,6 +12,7 @@ const connect = () => {
 
   conn.on("connect", () => {
     console.log("Ready to play!");
+    conn.write("Name: PWR");
   });
 
   conn.on("data", (eventData) => {
