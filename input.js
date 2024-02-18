@@ -6,28 +6,28 @@ let player = {
 const handleUserInput = function(data) {
   
   if (data === '\u0003') {
-    process.exit(); 
+    process.exit();
   }
   if (data === 'w') {
     player.y += 1;
-    console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
   }
   if (data === 's') {
     player.y -= 1;
-    console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
   }
   if (data === 'a') {
-    player.x -=1;
-    console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    player.x -= 1;
+    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
   }
   if (data === 'd') {
     player.x += 1;
-    console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
   }
 
 };
 
-const setupInput = function () {
+const setupInput = function() {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
