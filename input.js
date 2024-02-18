@@ -10,19 +10,19 @@ const handleUserInput = function(data) {
   }
   if (data === 'w') {
     player.y += 1;
-    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    console.log("Move: up");
   }
   if (data === 's') {
     player.y -= 1;
-    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    console.log("Move: down");
   }
   if (data === 'a') {
     player.x -= 1;
-    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    console.log("Move: left");
   }
   if (data === 'd') {
     player.x += 1;
-    //console.log(`Position: x = ${player.x}, y = ${player.y}`);
+    console.log("Move: right");
   }
 
 };
