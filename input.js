@@ -1,3 +1,5 @@
+let connection;
+
 let player = {
   x: 0,
   y: 0,
@@ -10,24 +12,25 @@ const handleUserInput = function(data) {
   }
   if (data === 'w') {
     player.y += 1;
-    console.log("Move: up");
+    connection.write("Move: up");
   }
   if (data === 's') {
     player.y -= 1;
-    console.log("Move: down");
+    connection.write("Move: down");
   }
   if (data === 'a') {
     player.x -= 1;
-    console.log("Move: left");
+    connection.write("Move: left");
   }
   if (data === 'd') {
     player.x += 1;
-    console.log("Move: right");
+    connection.write("Move: right");
   }
 
 };
 
-const setupInput = function() {
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
