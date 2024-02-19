@@ -7,17 +7,16 @@ const messages = {
   't': "Say: Oh no!!"
 };
 
-const moveUp = 'w';
-const moveDown = 's';
-const moveLeft = 'a';
-const moveRight = 'd';
+const moveKeys = {
+  'moveUp': 'w',
+  'moveDown': 's',
+  'moveLeft': 'a',
+  'moveRight': 'd',
+};
 
 module.exports = {
   IP,
   PORT,
   messages,
-  moveUp,
-  moveDown,
-  moveLeft,
-  moveRight,
+  moveKeys
 };

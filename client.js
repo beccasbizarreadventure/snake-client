@@ -15,7 +15,7 @@ const connect = () => {
     console.log("Ready to play!");
     conn.write("Name: HSS");
   });
-
+  // logs ready message to client and name to server 
   conn.on("data", (eventData) => {
     console.log(eventData);
   });
