@@ -29,8 +29,8 @@ const handleUserInput = function(data) {
     connection.write("Move: right");
   }
   if (messages[data]) {
-    connection.write(messages[data])
-  };
+    connection.write(messages[data]);
+  }
 
 };
 
