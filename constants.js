@@ -7,9 +7,17 @@ const messages = {
   't': "Say: Oh no!!"
 };
 
+const moveUp = 'w';
+const moveDown = 's';
+const moveLeft = 'a';
+const moveRight = 'd';
+
 module.exports = {
   IP,
   PORT,
   messages,
-  upKey
+  moveUp,
+  moveDown,
+  moveLeft,
+  moveRight,
 };

@@ -13,7 +13,7 @@ const connect = () => {
 
   conn.on("connect", () => {
     console.log("Ready to play!");
-    conn.write("Name: PWR");
+    conn.write("Name: HSS");
   });
 
   conn.on("data", (eventData) => {
