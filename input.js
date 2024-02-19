@@ -1,16 +1,10 @@
-//const {conn} = require("./client");
+const { messages } = require("./constants");
 
 let connection;
 
 let player = {
   x: 0,
   y: 0,
-};
-
-const messages = {
-  'e': "Say: I'll get you!!",
-  'r': "Say: Too easy!",
-  't': "Say: Oh no!!"
 };
 
 const handleUserInput = function(data) {
@@ -53,12 +47,3 @@ const setupInput = (conn) => {
 module.exports = {
   setupInput
 };
-
-// handlePlayerInput(input, client) {
-//   const snake = this.snakes.find(s => s.client === client)
-//   if (!snake) return false
-
-//   const dir = input.match(/Move: (.*)/)
-//   const name = input.match(/Name: (.*)/)
-//   const say  = input.match(/Say: (.*)/)
-
