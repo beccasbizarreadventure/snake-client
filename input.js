@@ -1,4 +1,4 @@
-const { messages, moveKeys} = require("./constants");
+const { messages, moveUp, moveDown, moveLeft, moveRight} = require("./constants");
 
 let connection;
 
@@ -12,19 +12,19 @@ const handleUserInput = function(data) {
   if (data === '\u0003') {
     process.exit();
   }
-  if (data === moveKeys.moveUp) {
+  if (data === moveUp) {
     player.y += 1;
     connection.write("Move: up");
   }
-  if (data === moveKeys.moveDown) {
+  if (data === moveDown) {
     player.y -= 1;
     connection.write("Move: down");
   }
-  if (data === moveKeys.moveLeft) {
+  if (data === moveLeft) {
     player.x -= 1;
     connection.write("Move: left");
   }
-  if (data === moveKeys.moveRight) {
+  if (data === moveRight) {
     player.x += 1;
     connection.write("Move: right");
   }
